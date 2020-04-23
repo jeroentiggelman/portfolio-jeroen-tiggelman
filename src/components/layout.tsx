@@ -86,6 +86,9 @@ const GlobalStyles = createGlobalStyle`
       color: ${theme.colors.primary};
     }
   }
+  .round {
+    border-radius: 50%;
+  }
   
   ${reset}
 `
@@ -229,7 +232,7 @@ const Layout = ({ children, color }: LayoutProps) => {
               justifyContent="space-between"
             >
               <Box width={['3rem', '4rem', '5rem', '6rem']}>
-                <Link to="/" aria-label="LekoArts, Back to Home">
+                <Link to="/" aria-label="Jeroen Tiggelman Photography, Back to Home">
                   <Logo />
                 </Link>
               </Box>

@@ -2,15 +2,15 @@
 const wrapper = promise =>
   promise.then(result => {
     if (result.errors) {
-      throw result.errors
+      throw result.errors;
     }
-    return result
-  })
+    return result;
+  });
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const projectTemplate = require.resolve('./src/templates/project.tsx')
+  const projectTemplate = require.resolve("./src/templates/project.tsx");
 
   const result = await wrapper(
     graphql(`
@@ -23,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     `)
-  )
+  );
 
   result.data.projects.nodes.forEach(node => {
     createPage({
@@ -31,8 +31,8 @@ exports.createPages = async ({ graphql, actions }) => {
       component: projectTemplate,
       context: {
         slug: node.slug,
-        images: `/${node.images}/`,
-      },
-    })
-  })
-}
+        images: `/${node.images}/`
+      }
+    });
+  });
+};

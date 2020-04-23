@@ -40,10 +40,10 @@ const Projects: React.FunctionComponent<PageProps> = ({ data: { projects } }) =>
 
   return (
     <Layout color="#000">
-      <SEO title="Projects | Jodie" />
+      <SEO title="Portfolio | Jeroen Tiggelman Photography" />
       <Area style={pageAnimation}>
         {projects.nodes.map(project => (
-          <GridItem key={project.slug} to={project.slug} aria-label={`View project "${project.title}"`}>
+          <GridItem key={project.slug} to={project.slug} aria-label={`Regardez project "${project.title}"`}>
             <Img fluid={project.cover.childImageSharp.fluid} />
             <span>{project.title}</span>
           </GridItem>

@@ -1,23 +1,24 @@
 module.exports = {
-  pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
+  pathPrefix: "/", // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
-  siteTitle: 'Jodie', // Navigation and Site Title
-  siteTitleAlt: 'Jodie - Gatsby Starter Portfolio', // Alternative Site title for SEO
-  siteTitleShort: 'Jodie', // short_name for manifest
-  siteHeadline: 'Come & Enjoy our excellent photos', // Headline for schema.org JSONLD
-  siteUrl: 'https://jodie.lekoarts.de', // Domain of your site. No trailing slash!
-  siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription: 'Image-heavy photography portfolio with colorful accents & great typography',
-  author: 'LekoArts', // Author for schema.org JSONLD
+  siteTitle: "Jeroen Tiggelman Photography", // Navigation and Site Title
+  siteTitleAlt: "Jeroen Tiggelman - Portfolio photographie", // Alternative Site title for SEO
+  siteTitleShort: "Jeroen Tiggelman", // short_name for manifest
+  siteHeadline: "prenez plaisir à découvrir mes photos", // Headline for schema.org JSONLD
+  siteUrl: "https://photographicdesign.be", // Domain of your site. No trailing slash!
+  siteLanguage: "fr", // Language Tag on <html> element
+  siteLogo: "/logos/logo.png", // Used for SEO and manifest
+  siteDescription:
+    "Image-heavy photography portfolio with colorful accents & great typography",
+  author: "Jeroen Tiggelman", // Author for schema.org JSONLD
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
-  userTwitter: '@jodie', // Twitter Username
-  ogSiteName: 'jodie', // Facebook Site Name
-  ogLanguage: 'en_US', // og:language
-  googleAnalyticsID: 'UA-XXXXXX-X',
+  userTwitter: "@jeroentiggelman", // Twitter Username
+  ogSiteName: "jeroentiggelmanphotography", // Facebook Site Name
+  ogLanguage: "fr_BE", // og:language
+  googleAnalyticsID: "UA-XXXXXX-X",
 
   // Manifest and Progress color
-  themeColor: '#db7436',
-  backgroundColor: '#3b3c4f',
-}
+  themeColor: "#db7436",
+  backgroundColor: "#3b3c4f"
+};

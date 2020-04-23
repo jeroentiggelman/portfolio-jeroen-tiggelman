@@ -135,14 +135,14 @@ const Instagram: React.FunctionComponent<Props> = ({
   })
 
   return (
-    <Layout color="#3F4F67">
-      <SEO title="Instagram | Jodie" />
+    <Layout color="#333">
+      <SEO title="Instagram | Jeroen Tiggelman" />
       <Grid style={pageAnimation}>
         {trail.map((style, index) => {
           // Grab everything before the first hashtag (because I write my captions like that)
           const post = instagram[index]
           const title = post.caption ? post.caption.split('#')[0] : ''
-          const date = new Date(post.timestamp * 1000).toLocaleDateString('de-DE')
+          const date = new Date(post.timestamp * 1000).toLocaleDateString('fr-BE')
 
           return (
             <Item style={style} href={`https://www.instagram.com/p/${post.id}/`} key={post.id}>
@@ -169,7 +169,7 @@ export default Instagram
 
 export const query = graphql`
   query Instagram {
-    instagram: allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 30) {
+    instagram: allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 60) {
       nodes {
         caption
         id

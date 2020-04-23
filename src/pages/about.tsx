@@ -13,13 +13,13 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO title="About | Jodie" desc="Hi. I'm LekoArts! You can visit my website or my other Gatsby projects." />
+      <SEO title="About | Jeroen Tiggelman photography" desc="Bonjour. Je m'appelle Jeroen Tiggelman, photographe basé dans Binche, dans la région du Centre, en Hainaut, Belgique. Je vous propose une gamme de services qui rendront vos souvenirs uniques et inoubliables!" />
       <AnimatedBox style={pageAnimation} py={[6, 6, 6, 8]} px={[6, 6, 8, 6, 8, 13]}>
-        <h1>Hi. I'm LekoArts!</h1>
-        <p>
-          You can visit my <a href="https://www.lekoarts.de/en">website</a> or my other{' '}
-          <a href="https://gatsby-starter-portfolio.netlify.com">Gatsby projects</a>.
-        </p>
+        <h1>Bonjour. Je m'appelle Jeroen Tiggelman!</h1>
+        <h2>Une photo est un souvenir</h2>
+        <p>Confiez vos reportages photo à un professionnel pour ne rien en rater.</p>
+        <p>Photographe néerlandais basé dans Binche, dans la région du Centre, en Hainaut, Belgique, je vous propose une gamme de services qui rendront vos souvenirs uniques et inoubliables.</p>
+        <p>Photographe de portraits, mariage, photographe de communion, de baptême, de bébés, photographe d'entreprise, je m'occupe de votre reportage de A à Z, ou en partie, selon vos souhaits.</p>
       </AnimatedBox>
     </Layout>
   )
