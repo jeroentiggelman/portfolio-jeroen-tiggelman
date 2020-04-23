@@ -22,8 +22,6 @@ type PageProps = {
         cover: ChildImageSharp
       }[]
     }
-    aboutUs: ChildImageSharp
-    instagram: ChildImageSharp
   }
 }
 
@@ -32,19 +30,17 @@ const Area = styled(animated.div)`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 35vw 40vw 25vw;
   grid-template-areas:
-    'first-project about-us about-us'
-    'three-projects three-projects three-projects'
-    'instagram instagram instagram';
+    'first-project first-project first-project'
+    'three-projects three-projects three-projects';
 
   @media (max-width: ${props => props.theme.breakpoints[3]}) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 35vw 30vw 30vw 25vw;
 
     grid-template-areas:
-      'first-project first-project about-us about-us'
+      'first-project first-project first-project first-project'
       'three-projects three-projects three-projects three-projects'
-      'three-projects three-projects three-projects three-projects'
-      'instagram instagram instagram instagram';
+      'three-projects three-projects three-projects three-projects';
   }
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
@@ -52,11 +48,10 @@ const Area = styled(animated.div)`
     grid-template-rows: repeat(5, 38vw);
 
     grid-template-areas:
-      'first-project about-us'
+      'first-project first-project'
       'three-projects three-projects'
       'three-projects three-projects'
-      'three-projects three-projects'
-      'instagram instagram';
+      'three-projects three-projects';
   }
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
@@ -65,20 +60,14 @@ const Area = styled(animated.div)`
 
     grid-template-areas:
       'first-project'
-      'about-us'
       'three-projects'
       'three-projects'
-      'three-projects'
-      'instagram';
+      'three-projects';
   }
 `
 
 const FirstProject = styled(GridItem)`
   grid-area: first-project;
-`
-
-const AboutUs = styled(GridItem)`
-  grid-area: about-us;
 `
 
 const ThreeProjects = styled.div`
@@ -92,11 +81,7 @@ const ThreeProjects = styled.div`
   }
 `
 
-const Instagram = styled(GridItem)`
-  grid-area: instagram;
-`
-
-const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, threeProjects, aboutUs, instagram } }) => {
+const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, threeProjects } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -111,10 +96,6 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, three
           <Img fluid={firstProject.cover.childImageSharp.fluid} />
           <span>{firstProject.title}</span>
         </FirstProject>
-        <AboutUs to="/about" aria-label="Visit my about page">
-          <Img fluid={aboutUs.childImageSharp.fluid} />
-          <span>About</span>
-        </AboutUs>
         <ThreeProjects>
           {threeProjects.nodes.map(project => (
             <GridItem to={project.slug} key={project.slug} aria-label={`View project "${project.title}"`}>
@@ -123,10 +104,6 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, three
             </GridItem>
           ))}
         </ThreeProjects>
-        <Instagram to="/instagram" aria-label="See my Instagram pictures">
-          <Img fluid={instagram.childImageSharp.fluid} />
-          <span>Instagram</span>
-        </Instagram>
       </Area>
     </Layout>
   )

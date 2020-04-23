@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { transparentize, readableColor } from 'polished'
 import styled from 'styled-components'
@@ -41,7 +41,17 @@ const Description = styled(animated.div)`
 
 const PButton = styled(Button)<{ color: string }>`
   background: ${props => (props.color === 'white' ? 'black' : props.color)};
-  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
+  &:hover {
+    background: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
+    border: 1px solid ${props => (props.color === 'white' ? 'black' : props.color)};
+    & a {
+      color: ${props => (props.color === 'white' ? 'black' : props.color)};
+    }
+  }
+  & a {
+    text-decoration: none;
+    color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
+  }
 `
 
 type PageProps = {
@@ -120,9 +130,9 @@ const Project: React.FunctionComponent<PageProps> = ({ data: { project, images }
         </PBox>
       </Content>
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own project?</h2>
+        <h2>Vous voulez commencer votre propre projet ?</h2>
         <PButton color={project.color} py={4} px={8}>
-          Contact Us
+          <Link to="/contact">Contactez moi</Link>
         </PButton>
       </PBox>
     </Layout>
