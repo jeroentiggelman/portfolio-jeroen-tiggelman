@@ -16,7 +16,7 @@ module.exports = {
   userTwitter: "@jeroentiggelman", // Twitter Username
   ogSiteName: "jeroentiggelmanphotography", // Facebook Site Name
   ogLanguage: "fr_BE", // og:language
-  googleAnalyticsID: "UA-XXXXXX-X",
+  googleAnalyticsID: "UA-35435279-1",
 
   // Manifest and Progress color
   themeColor: "#db7436",
