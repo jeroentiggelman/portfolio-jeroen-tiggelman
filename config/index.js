@@ -7,7 +7,7 @@ module.exports = {
   siteHeadline: "prenez plaisir à découvrir mes photos", // Headline for schema.org JSONLD
   siteUrl: "https://photographicdesign.be", // Domain of your site. No trailing slash!
   siteLanguage: "fr", // Language Tag on <html> element
-  siteLogo: "/logos/logo.png", // Used for SEO and manifest
+  siteLogo: "/logos/logo.jpg", // Used for SEO and manifest
   siteDescription:
     "Image-heavy photography portfolio with colorful accents & great typography",
   author: "Jeroen Tiggelman", // Author for schema.org JSONLD
@@ -20,5 +20,5 @@ module.exports = {
 
   // Manifest and Progress color
   themeColor: "#db7436",
-  backgroundColor: "#3b3c4f"
+  backgroundColor: "#3b3c4f",
 };
